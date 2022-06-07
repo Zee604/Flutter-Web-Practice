@@ -32,6 +32,9 @@ class _HomePageState extends State<HomePage> {
   double elevation = 4.0;
   double scale = 1.0;
   Offset translate = Offset(0,0);
+  double animHeight = 380;
+  double animWidth = 320;
+  int index  = -1;
 
 
   @override
@@ -1076,29 +1079,131 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       const SizedBox(width: 40.0),
                                       Expanded(
-                                        child: Container(
-                                          height: 380,
-                                          width: 320,
-                                          child: Image.asset('assets/images/port1.jpg',
-                                            fit: BoxFit.fitWidth,),
+                                        child: InkWell(
+
+                                          onTap: (){
+
+                                          },
+                                          onHover: (value){
+                                            if(value){
+                                              setState((){
+                                                index = 0;
+                                                elevation = 2.0;
+                                                scale = 1.02;
+                                                translate = Offset(0,0);
+                                                animHeight = 400;
+                                                animWidth = 340;
+
+                                              });
+                                            }else{
+                                              setState((){
+                                                index = -1;
+                                                elevation = 4.0;
+                                                scale = 1.0;
+                                                animHeight = 380;
+                                                animWidth = 320;
+                                                translate = Offset(0,0);
+                                              });
+                                            }
+                                          },
+                                          child: AnimatedContainer(
+                                            curve: Curves.easeInOut,
+                                            duration: Duration(milliseconds: 500),
+                                            height: index == 0 ? animHeight : 380,
+                                            width: index == 0 ? animWidth : 320,
+                                            child: Material(
+                                              elevation: elevation,
+                                              color: Colors.transparent,
+                                              child: Image.asset('assets/images/port1.jpg',
+                                                fit: BoxFit.cover,),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                       const SizedBox(width: 40.0),
                                       Expanded(
-                                        child: Container(
-                                          height: 380,
-                                          width: 320,
-                                          child: Image.asset('assets/images/port2.jpg',
-                                            fit: BoxFit.fitWidth,),
+                                        child: InkWell(
+
+                                          onTap: (){
+
+                                          },
+                                          onHover: (value){
+                                            if(value){
+                                              setState((){
+                                                index = 1;
+                                                elevation = 2.0;
+                                                scale = 1.02;
+                                                translate = Offset(0,0);
+                                                animHeight = 400;
+                                                animWidth = 340;
+
+                                              });
+                                            }else{
+                                              setState((){
+                                                index = -1;
+                                                elevation = 4.0;
+                                                scale = 1.0;
+                                                animHeight = 380;
+                                                animWidth = 320;
+                                                translate = Offset(0,0);
+                                              });
+                                            }
+                                          },
+                                          child: AnimatedContainer(
+                                            curve: Curves.easeInOut,
+                                            duration: Duration(milliseconds: 500),
+                                            height: index == 1 ? animHeight : 380,
+                                            width: index == 1 ? animWidth : 320,
+                                            child: Material(
+                                              elevation: elevation,
+                                              color: Colors.transparent,
+                                              child: Image.asset('assets/images/port2.jpg',
+                                                fit: BoxFit.cover,),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                       const SizedBox(width: 40.0),
                                       Expanded(
-                                        child: Container(
-                                          height: 380,
-                                          width: 320,
-                                          child: Image.asset('assets/images/port3.jpg',
-                                            fit: BoxFit.fitWidth,),
+                                        child: InkWell(
+
+                                          onTap: (){
+
+                                          },
+                                          onHover: (value){
+                                            if(value){
+                                              setState((){
+                                                index = 2;
+                                                elevation = 2.0;
+                                                scale = 1.02;
+                                                translate = Offset(0,0);
+                                                animHeight = 400;
+                                                animWidth = 340;
+
+                                              });
+                                            }else{
+                                              setState((){
+                                                index = -1;
+                                                elevation = 4.0;
+                                                scale = 1.0;
+                                                animHeight = 380;
+                                                animWidth = 320;
+                                                translate = Offset(0,0);
+                                              });
+                                            }
+                                          },
+                                          child: AnimatedContainer(
+                                            curve: Curves.easeInOut,
+                                            duration: Duration(milliseconds: 500),
+                                            height: index == 2 ? animHeight : 380,
+                                            width: index == 2 ? animWidth : 320,
+                                            child: Material(
+                                              elevation: elevation,
+                                              color: Colors.transparent,
+                                              child: Image.asset('assets/images/port3.jpg',
+                                                fit: BoxFit.cover,),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                       const SizedBox(width: 40.0),
@@ -1109,29 +1214,131 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       const SizedBox(width: 40.0),
                                       Expanded(
-                                        child: Container(
-                                          height: 380,
-                                          width: 320,
-                                          child: Image.asset('assets/images/port4.jpg',
-                                            fit: BoxFit.fill,),
+                                        child: InkWell(
+
+                                          onTap: (){
+
+                                          },
+                                          onHover: (value){
+                                            if(value){
+                                              setState((){
+                                                index = 3;
+                                                elevation = 2.0;
+                                                scale = 1.02;
+                                                translate = Offset(0,0);
+                                                animHeight = 400;
+                                                animWidth = 340;
+
+                                              });
+                                            }else{
+                                              setState((){
+                                                index = -1;
+                                                elevation = 4.0;
+                                                scale = 1.0;
+                                                animHeight = 380;
+                                                animWidth = 320;
+                                                translate = Offset(0,0);
+                                              });
+                                            }
+                                          },
+                                          child: AnimatedContainer(
+                                            curve: Curves.easeInOut,
+                                            duration: Duration(milliseconds: 500),
+                                            height: index == 3 ? animHeight : 380,
+                                            width: index == 3 ? animWidth : 320,
+                                            child: Material(
+                                              elevation: elevation,
+                                              color: Colors.transparent,
+                                              child: Image.asset('assets/images/port4.jpg',
+                                                fit: BoxFit.cover,),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                       const SizedBox(width: 40.0),
                                       Expanded(
-                                        child: Container(
-                                          height: 380,
-                                          width: 320,
-                                          child: Image.asset('assets/images/port5.jpg',
-                                            fit: BoxFit.fill,),
+                                        child: InkWell(
+
+                                          onTap: (){
+
+                                          },
+                                          onHover: (value){
+                                            if(value){
+                                              setState((){
+                                                index = 4;
+                                                elevation = 2.0;
+                                                scale = 1.02;
+                                                translate = Offset(0,0);
+                                                animHeight = 400;
+                                                animWidth = 340;
+
+                                              });
+                                            }else{
+                                              setState((){
+                                                index = -1;
+                                                elevation = 4.0;
+                                                scale = 1.0;
+                                                animHeight = 380;
+                                                animWidth = 320;
+                                                translate = Offset(0,0);
+                                              });
+                                            }
+                                          },
+                                          child: AnimatedContainer(
+                                            curve: Curves.easeInOut,
+                                            duration: Duration(milliseconds: 500),
+                                            height: index == 4 ? animHeight : 380,
+                                            width: index == 4 ? animWidth : 320,
+                                            child: Material(
+                                              elevation: elevation,
+                                              color: Colors.transparent,
+                                              child: Image.asset('assets/images/port5.jpg',
+                                                fit: BoxFit.cover,),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                       const SizedBox(width: 40.0),
                                       Expanded(
-                                        child: Container(
-                                          height: 380,
-                                          width: 320,
-                                          child: Image.asset('assets/images/port6.jpg',
-                                            fit: BoxFit.fill,),
+                                        child: InkWell(
+
+                                          onTap: (){
+
+                                          },
+                                          onHover: (value){
+                                            if(value){
+                                              setState((){
+                                                index = 5;
+                                                elevation = 2.0;
+                                                scale = 1.02;
+                                                translate = Offset(0,0);
+                                                animHeight = 400;
+                                                animWidth = 340;
+
+                                              });
+                                            }else{
+                                              setState((){
+                                                index = -1;
+                                                elevation = 4.0;
+                                                scale = 1.0;
+                                                animHeight = 380;
+                                                animWidth = 320;
+                                                translate = Offset(0,0);
+                                              });
+                                            }
+                                          },
+                                          child: AnimatedContainer(
+                                            curve: Curves.easeInOut,
+                                            duration: Duration(milliseconds: 500),
+                                            height: index == 5 ? animHeight : 380,
+                                            width: index == 5 ? animWidth : 320,
+                                            child: Material(
+                                              elevation: elevation,
+                                              color: Colors.transparent,
+                                              child: Image.asset('assets/images/port6.jpg',
+                                                fit: BoxFit.cover,),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                       const SizedBox(width: 40.0),

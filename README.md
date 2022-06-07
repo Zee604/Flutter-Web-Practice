@@ -1,4 +1,4 @@
-# flutter_web_prac
+# Flutter_Web_Practice
 
 A new Flutter Web project.
 
